@@ -3,6 +3,7 @@ package com.example.chapter2
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         //버튼을 클릭했을 때 응답하는 클릭리스너
         rollButton.setOnClickListener {
             //toast 는 화면에 알림메세지 띄우기
-            val toast = Toast.makeText(this,"주사위 던졌다!",Toast.LENGTH_SHORT)
+            val toast = Toast.makeText(this,"주사위 던졌다",Toast.LENGTH_SHORT)
             //toast 를 보여주는 메소드
             toast.show()
             //rollDice 메소드 호출
@@ -29,13 +30,33 @@ class MainActivity : AppCompatActivity() {
         //Dice class 가 참조된다.
         val dice = Dice(6)
         val diceRoll = dice.roll()
-        val resultNum:TextView = findViewById(R.id.textView2)
-        resultNum.text = diceRoll.toString()
+        //textView 를 imageView 로 변경
+        //val resultNum:TextView = findViewById(R.id.textView2)
+        val diceImage: ImageView = findViewById(R.id.imageView)
+        //resultNum.text = diceRoll.toString()
+        //주사위 굴리기 테스트용 코드
+        //diceImage.setImageResource(R.drawable.dice_2)
+//        when (diceRoll){
+//            1 -> diceImage.setImageResource(R.drawable.dice_1)
+//            2 -> diceImage.setImageResource(R.drawable.dice_2)
+//            3 -> diceImage.setImageResource(R.drawable.dice_3)
+//            4 -> diceImage.setImageResource(R.drawable.dice_4)
+//            5 -> diceImage.setImageResource(R.drawable.dice_5)
+//            6 -> diceImage.setImageResource(R.drawable.dice_6)
+//        }
+        //위의 코드를 더 간결하게
+        val drawableResource = when (diceRoll) {
+            1 -> R.drawable.dice_1
+            2 -> R.drawable.dice_2
+            3 -> R.drawable.dice_3
+            4 -> R.drawable.dice_4
+            5 -> R.drawable.dice_5
+            else -> R.drawable.dice_6
+        }
+        //주사위 이미지 숫자에 맞춰 표시하기
+        diceImage.setImageResource(drawableResource)
 
-        val dice2= Dice(20)
-        val diceRoll2 = dice2.roll()
-        val resultNum2:TextView = findViewById(R.id.textView3)
-        resultNum2.text = diceRoll2.toString()
+
     }
 
 }
