@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">chapter3.Tip Time</string>
+    <string name="cost_of_service">금액을 입력하세요.</string>
+    <string name="how_was_the_service">서비스가 어떠셨나요?</string>
+    <string name="amazing_service">Amazing (20%)</string>
+    <string name="good_service">Good (18%)</string>
+    <string name="ok_service">Okay (15%)</string>
+    <string name="round_up_tip">반올림을 하시겠습니까?</string>
+    <string name="calculate">계산하기</string>
+    <string name="tip_amount">금액 : %s</string>
+</resources>
