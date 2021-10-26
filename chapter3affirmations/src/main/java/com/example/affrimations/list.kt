@@ -1,4 +1,4 @@
-package com.example.tipcount
+package com.example.affrimations
 
 fun main(){
 // list 는 삭제 와 추가는 된다. 하지만 변경은 되지않는다

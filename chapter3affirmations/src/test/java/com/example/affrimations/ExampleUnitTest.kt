@@ -1,4 +1,4 @@
-package com.example.tipcount
+package com.example.affrimations
 
 import org.junit.Test
 
