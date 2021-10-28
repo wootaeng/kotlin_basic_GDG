@@ -3,3 +3,4 @@ include ':app'
 rootProject.name = "kotiln_beginner"
 include ':chapter3tiptime'
 include ':chapter3affirmations'
+include ':chapter4navigation'
