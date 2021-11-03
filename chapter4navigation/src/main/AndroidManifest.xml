@@ -9,9 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotiln_beginner">
+        <!-- 프래그먼트로 변경하면서 사용안함
         <activity
             android:name=".DetailActivity"
             android:parentActivityName=".MainActivity" />
+        -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
